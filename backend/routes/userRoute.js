@@ -1,12 +1,21 @@
 import express from 'express'
 import User from '../models/user.js'
+import { userValidationSchema } from '../validation/userValidation.js'
 
 const router = express.Router()
 
 //CREATE
 router.post('/user',async (req, res) => {
+    const { error, value } = userValidationSchema.validate(req.body)
+
+    if (error) {
+    return res.status(400).json({
+      message: error.details[0].message
+    })
+  }
+
     try{
-        const user = new User(req.body)
+        const user = new User(value)
         const saveUser = await user.save()
         res.status(201).json(saveUser)
     }catch(err){
