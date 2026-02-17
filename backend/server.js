@@ -12,7 +12,7 @@ const port = 3000
 app.use(express.json())
 
 mongoose.connect('mongodb://localhost:27017/food-products')
-.then(() => console.log('Connectes to Mongodb'))
+.then(() => console.log('Connected to Mongodb'))
 .catch(err => console.log('Error connecting to Mongodb', err))
 
 app.use('/',productRoute, userRoute, cartRoute, messageRoute, roomRoute)//use all routes
