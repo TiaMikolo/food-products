@@ -3,6 +3,8 @@ import mongoose from 'mongoose'
 import productRoute from './routes/productRoute.js'
 import userRoute from './routes/userRoute.js'
 import cartRoute from './routes/cartRoute.js'
+import messageRoute from './routes/messageRoute.js'
+import roomRoute from './routes/roomRoute.js'
 
 const app = express()
 const port = 3000
@@ -13,7 +15,7 @@ mongoose.connect('mongodb://localhost:27017/food-products')
 .then(() => console.log('Connectes to Mongodb'))
 .catch(err => console.log('Error connecting to Mongodb', err))
 
-app.use('/',productRoute, userRoute, cartRoute)//use product route
+app.use('/',productRoute, userRoute, cartRoute, messageRoute, roomRoute)//use all routes
 
 app.get('/', (req,res) => {
     res.send('Welcome to my API')//default route
