@@ -6,11 +6,19 @@ const router = express.Router()
 // CREATE
 router.post('/product', async (req, res) => {
     try{
-        const product = new Product(req.body)   
-        const saveProduct = await product.save()
-        res.status(201).json(saveProduct)
+        const existingProduct = await Product.findOne({name : req.body.name})
+
+        if (existingProduct) {
+            existingProduct.quantity += req.body.quantity
+            await existingProduct.save()
+            return res.status(200).json(existingProduct)
+        } else {
+            const product = new Product(req.body)
+            const saveProduct = await product.save()
+            return res.status(201).json(saveProduct)
+        }
     }catch(err){
-        res.status(400).json({message: err.message})
+        return res.status(400).json({message: err.message})
     }
 })
 

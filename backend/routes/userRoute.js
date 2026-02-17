@@ -22,7 +22,7 @@ router.post('/user',async (req, res) => {
         const hashedPassword = await bcrypt.hash(value.password, 10)
         const user = new User({...value, password: hashedPassword})
         const saveUser = await user.save()
-        res.status(201).json(saveUser)
+        res.status(201).json({user: saveUser})
     }catch(err){
         res.status(400).json({message: err.message})
     }
