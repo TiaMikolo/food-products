@@ -31,7 +31,7 @@ router.post('/cart', async (req, res) => {
                         existCart.products.push({productId: p.productId, quantity: p.quantity})
                     }
                 }
-            } 
+            }
             const updateCart = await existCart.save()
             return res.status(200).json(updateCart)
         }else{
@@ -97,7 +97,7 @@ router.put('/cart/:userId/product/:productId', async (req,res) => {
 })
 
 
-//remove product
+//remove product from cart
 router.delete('/cart/:userId/product/:productId', async (req, res) => {
     const {userId, productId} = req.params
 
