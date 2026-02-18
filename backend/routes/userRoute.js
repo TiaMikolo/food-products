@@ -2,6 +2,7 @@ import express from 'express'
 import User from '../models/user.js'
 import { userValidationSchema } from '../validation/userValidation.js'
 import bcrypt from 'bcryptjs'
+import jwt from 'jsonwebtoken'
 
 const router = express.Router()
 
@@ -20,6 +21,7 @@ router.post('/user',async (req, res) => {
 
     try{
         const hashedPassword = await bcrypt.hash(value.password, 10)
+
         const user = new User({...value, password: hashedPassword})
         const saveUser = await user.save()
         res.status(201).json({user: saveUser})
@@ -39,8 +41,9 @@ router.post('/user/login',async (req, res) => {
         const isMatch = await bcrypt.compare(password, user.password)//check password
         if (!isMatch) return res.status(400).json({message: 'Invalid credentials'})
 
-        const token = jwt.sign({ id: user._id, role: user.role }, 'your_secret_key', { expiresIn: '1h' });
-        res.status(200).json({message: 'Login successful'}, {token})//ok
+        const token = jwt.sign({ id: user._id}, process.env.JWT_SECRET, { expiresIn: process.env.JWT_EXPIRES_IN});// create token
+
+        res.status(200).json({message: 'Login successful', token})//ok
     }catch(err){
         res.status(500).json({message: err.message})
     }

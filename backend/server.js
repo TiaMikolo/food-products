@@ -5,13 +5,14 @@ import userRoute from './routes/userRoute.js'
 import cartRoute from './routes/cartRoute.js'
 import messageRoute from './routes/messageRoute.js'
 import roomRoute from './routes/roomRoute.js'
+import 'dotenv/config'
 
 const app = express()
-const port = 3000
+const port = process.env.MY_PORT
 
 app.use(express.json())
 
-mongoose.connect('mongodb://localhost:27017/food-products')
+mongoose.connect(process.env.URL_FOR_MONGODB)
 .then(() => console.log('Connected to Mongodb'))
 .catch(err => console.log('Error connecting to Mongodb', err))
 
