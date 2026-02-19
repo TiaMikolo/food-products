@@ -1,80 +1,29 @@
-import express from 'express'
-import Product from '../models/product.js'
+import express from "express";
+import { createProduct } from "../controllers/Products/createProduct/createProduct.js";
+import { getProducts } from "../controllers/Products/getProducts/getProducts.js";
+import { getProductById } from "../controllers/Products/getProductById/getProductById.js";
+import { readProductBySearchTerm } from "../controllers/Products/readProductBySearchTerm/readProductBySearchTerm.js";
+import { updateProduct } from "../controllers/Products/updateProduct/updateProduct.js";
+import { deleteProduct } from "../controllers/Products/deleteProduct/deleteProduct.js";
 
-const router = express.Router() 
+const router = express.Router();
 
 // CREATE
-router.post('/product', async (req, res) => {
-    try{
-        const existingProduct = await Product.findOne({name : req.body.name})
-
-        if (existingProduct) {
-            existingProduct.quantity += req.body.quantity
-            await existingProduct.save()
-            return res.status(200).json(existingProduct)
-        } else {
-            const product = new Product(req.body)
-            const saveProduct = await product.save()
-            return res.status(201).json(saveProduct)
-        }
-    }catch(err){
-        return res.status(400).json({message: err.message})
-    }
-})
+router.post("/product", createProduct);
 
 // READ
-router.get('/products', async (req, res) => {
-    try{
-        const products = await Product.find()
-        res.status(200).json(products)
-    }catch(err){
-        res.status(500).json({message : err.message})
-    }
-})
+router.get("/products", getProducts);
 
 // READ BY ID
-router.get('/product/:id', async (req, res) => {
-    try{
-        const product = await Product.findById(req.params.id)
-        res.status(200).json(product)
-    }catch(err){
-        res.status(500).json({message : err.message})
-    }
-})
+router.get("/product/:id", getProductById);
 
 //READ BY WORDS
-router.get('/products/search',async (req, res) =>{
-    try{
-        const text = req.query.text
-        const products = await Product.find({
-           name : { $regex : text, $options : 'i'}
-        })
-        res.status(200).json(products)
-    }catch(err){
-        res.status(500).json({message : err.message})
-    }
-})
+router.get("/products/search", readProductBySearchTerm);
 
 //UPDATE
-router.put('/product/:id',async (req, res) => {
-    try{
-        const updateProduct = await Product.findByIdAndUpdate(req.params.id, req.body,{new: true})
-        if (!updateProduct) return res.status(404).json({message : 'product not found'})
-        res.status(200).json(updateProduct)
-    }catch (err){
-        res.status(500).json({message : err.message})
-    }
-})
+router.put("/product/:id", updateProduct);
 
 //DELETE
-router.delete('/product/:id', async (req,res) => {
-    try{
-        const deleteProduct = await Product.findByIdAndDelete(req.params.id)
-        if (!deleteProduct) return res.status(404).json({message : 'product not found'})
-        res.status(200).json({message : 'product deleted successfully'})
-    }catch (err){
-        res.status(500).json({message : err.message})
-    }
-})  
+router.delete("/product/:id", deleteProduct);
 
-export default router
+export default router;
