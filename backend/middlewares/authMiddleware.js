@@ -1,14 +1,14 @@
-import jwt from "jsonwebtoken";
+import jwt from 'jsonwebtoken'
 
 export const authMiddleware = (req, res, next) => {
-  const token = req.headers.authorization?.split(" ")[1]; //ex : ["Bearer", "TOKEN"] => take TOKEN
-  if (!token) return res.status(401).json({ message: "Unauthorized" });
+  const token = req.headers.authorization?.split(' ')[1] //ex : ["Bearer", "TOKEN"] => take TOKEN
+  if (!token) return res.status(401).json({ message: 'Unauthorized' })
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET); //verify token
-    req.user = decoded; //add user info to request
-    next();
+    const decoded = jwt.verify(token, process.env.JWT_SECRET) //verify token
+    req.user = decoded //add user info to request
+    next()
   } catch {
-    return res.status(401).json({ message: "Unauthorized" });
+    return res.status(401).json({ message: 'Unauthorized' })
   }
-};
+}
