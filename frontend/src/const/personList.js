@@ -1,23 +1,31 @@
-import avatar from './linkImage/avatar'
+import zaraLinkImage from './linkImage/zaraLinkImage'
+import lamarLinkImage from './linkImage/lamarLinkImage'
+import bertineLinkImage from './linkImage/bertineLinkImage'
 
 const personList = [
   {
+    id: 1,
     name: 'Gregorio Y. Zara',
-    image: avatar,
+    isCertified: true,
+    image: zaraLinkImage,
     profession: 'Inventor',
     awards: ['National Scientist', 'Outstanding Researcher'],
     discovery: 'Zinc (chemical element)',
   },
   {
-    name: 'Jean-Pierre Dufau',
-    image: avatar,
+    id: 2,
+    name: 'Bertine',
+    isCertified: true,
+    image: bertineLinkImage,
     profession: 'Physicist',
     awards: ['Nobel Prize in Physics'],
     discovery: 'Nuclear fusion',
   },
   {
+    id: 3,
     name: 'Hedy Lamarr',
-    image: avatar,
+    isCertified: false,
+    image: lamarLinkImage,
     profession: 'Actress',
     awards: ['Best Actress', 'Most Beautiful Woman'],
     discovery: 'Polonium (chemical element)',
