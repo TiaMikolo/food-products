@@ -1,16 +1,14 @@
-// import SculpturePage from './pages/SculpturePage/SculpturePage'
-import ProductCardPage from './pages/ProductCardPage/ProductCardPage'
+import ProductListPage from './pages/ProductListPage/ProductListPage'
+import SculpturePage from './pages/SculpturePage/SculpturePage'
 import SignInPage from './pages/SignInPage/SignInPage'
 import SignUpPage from './pages/SignUpPage/SignUpPage'
 
 const App = () => {
   return (
-    // <>
-    //   <SculpturePage />
-    // </>
+    // <SculpturePage />
     // <SignInPage />
     // <SignUpPage />
-    <ProductCardPage />
+    <ProductListPage />
   )
 }
 

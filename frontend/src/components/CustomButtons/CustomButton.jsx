@@ -1,10 +1,13 @@
-import { Button } from 'antd'
+import { Button, Form } from 'antd'
+import tailFormItemLayout from '../../const/tailFormItemLayout/tailFormItemLayout'
 
-const CustomButton = ({ onClick, label, color = 'purple', variant = 'outlined' }) => {
+const CustomButton = ({ content, onClick, type, htmlType }) => {
   return (
-    <Button color={color} variant={variant} onClick={onClick}>
-      {label}
-    </Button>
+    <Form.Item {...tailFormItemLayout}>
+      <Button type={type} htmlType={htmlType} onClick={onClick}>
+        {content}
+      </Button>
+    </Form.Item>
   )
 }
 

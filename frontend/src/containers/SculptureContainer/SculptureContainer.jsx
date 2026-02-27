@@ -23,12 +23,12 @@ const SculptureContainer = () => {
 
   return (
     <div>
-      <CustomButton label="Next" onClick={handleNextClick} />
+      <CustomButton content="Next" onClick={handleNextClick} />
       <h2>{sculpture.name}</h2>
       <h3>
         ({index + 1} of {sculptureList.length})
       </h3>
-      <CustomButton label={`${showMore ? 'Hide' : 'Show'} details`} onClick={handleMoreClick} />
+      <CustomButton content={`${showMore ? 'Hide' : 'Show'} details`} onClick={handleMoreClick} />
       {showMore && <p>{sculpture.description}</p>}
       <img src={sculpture.url} alt={sculpture.alt} />
     </div>
