@@ -1,23 +1,27 @@
-import { Card } from 'antd'
-import styleCard from './ProductCard.css'
+import { Card, Button, InputNumber } from 'antd'
+import { useStyles } from './ProductCard.css';
 const { Meta } = Card
+import { MinusOutlined, PlusOutlined } from '@ant-design/icons';
 
-const ProductCard = ({ alt, img, productName, price }) => (
-  <Card
-    hoverable
-    style={styleCard}
-    cover={
-      <img
-        draggable={false}
-        alt={alt}
-        src={img}
-        width={'232px'}
-        height={'232px'}
-        style={{ objectFit: 'contain' }}
-      />
-    }
-  >
-    <Meta title={productName} description={`${price} €`} />
-  </Card>
-)
+
+const ProductCard = ({ alt, img, productName, price }) => {
+  const classes = useStyles();
+
+      return (
+        <Card
+          hoverable
+          className={classes.root}
+          cover={
+            <img
+              draggable={false}
+              alt={alt}
+              src={img}
+              className={classes.image}
+            />
+          }
+        >
+          <Meta title={productName} description={`${price} €`} />
+        </Card>
+      )
+}
 export default ProductCard
