@@ -9,8 +9,8 @@ const App = () => {
     // <SculpturePage />
     // <SignInPage />
     // <SignUpPage />
-    // <ProductListPage />
-    <MessagePage />
+    <ProductListPage />
+    // <MessagePage />
   )
 }
 

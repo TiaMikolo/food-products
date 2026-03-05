@@ -6,9 +6,9 @@ import { useStyles } from './ProductListContainer.css';
 const ProductCardContainer = () => {
   const classes = useStyles();
   return (
-    <Row className={classes.rowCustom} gutter={[32, 32]} justify="center" align="bottom">
+    <Row className={classes.rowCustom} gutter={[32, 16]} justify="center" align="bottom">
       {ProductList.map(product => (
-        <Col key={product.id}>
+        <Col key={product.id} className={classes.colCustom}>
           <CustomCard
             label={product.name}
             img={product.image}

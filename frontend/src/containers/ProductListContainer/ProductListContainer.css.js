@@ -6,4 +6,7 @@ export const useStyles = createUseStyles(() => ({
    marginBottom: '32px',
    overflowX: 'hidden'
   },
+  colCustom: {
+    paddingBottom: '16px',
+  }
 }))
