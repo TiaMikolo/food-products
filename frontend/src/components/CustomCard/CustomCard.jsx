@@ -1,8 +1,8 @@
 import { Card } from 'antd'
-import styleCard from './ProductCard.css'
+import styleCard from './CustomCard.css'
 const { Meta } = Card
 
-const ProductCard = ({ alt, img, productName, price }) => (
+const CustomCard = ({ alt, img, productName, price }) => (
   <Card
     hoverable
     style={styleCard}
@@ -20,4 +20,4 @@ const ProductCard = ({ alt, img, productName, price }) => (
     <Meta title={productName} description={`${price} €`} />
   </Card>
 )
-export default ProductCard
+export default CustomCard

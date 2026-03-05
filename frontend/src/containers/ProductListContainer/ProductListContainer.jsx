@@ -1,13 +1,13 @@
-import ProductCard from '../../components/ProductCard/ProductCard'
+import CustomCard from '../../components/CustomCard/CustomCard'
 import ProductList from '../../const/ProductList/ProductList'
 import { Row, Col } from 'antd'
 
-const ProductListContainer = () => {
+const ProductCardContainer = () => {
   return (
     <Row gutter={[32, 32]} justify="space-between" align="middle">
       {ProductList.map(product => (
         <Col key={product.id}>
-          <ProductCard
+          <CustomCard
             label={product.name}
             img={product.image}
             productName={product.name}
@@ -19,4 +19,4 @@ const ProductListContainer = () => {
   )
 }
 
-export default ProductListContainer
+export default ProductCardContainer

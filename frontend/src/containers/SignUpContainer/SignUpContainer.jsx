@@ -2,38 +2,39 @@ import { Form, Flex } from 'antd'
 import layout from '../../const/layout/layout'
 import { flexSTyleSignUp, signUpContainerStyle } from './signUpContainer.css'
 import CustomButton from '../../components/CustomButtons/CustomButton'
-import OutlinedInput from '../../components/InputComponents/OutlinedInput'
+// import OutlinedInput from '../../components/CustomInput/CustomInput'
+import CustomInput from '../../components/CustomInput/CustomInput'
 
 const SignUpContainer = () => {
   return (
     <Flex justify="center" align="center" style={flexSTyleSignUp}>
       <Form {...layout} name="nest-messages" style={signUpContainerStyle}>
-        <OutlinedInput
+        <CustomInput
           name={['user', 'name ']}
           label="Name"
           rule={[{ required: true }]}
           type="text"
         />
-        <OutlinedInput
+        <CustomInput
           name={['user', 'FirstName ']}
           label="FirstName"
           rule={[{ required: true }]}
           type="text"
         />
-        <OutlinedInput
+        <CustomInput
           name={['user', 'email ']}
           label="Email"
           rule={[{ type: 'email', required: true }]}
           type="text"
         />
-        <OutlinedInput
+        <CustomInput
           type="password"
           name="password"
           label="Password"
           rule={[{ required: true, message: 'Please input your password!' }]}
           hasFeedback="hasFeedback"
         />
-        <OutlinedInput
+        <CustomInput
           type="password"
           name={['user', 'password']}
           label="Confirm Password"
@@ -53,7 +54,7 @@ const SignUpContainer = () => {
           ]}
           hasFeedback="hasFeedback"
         />
-        <OutlinedInput type="phoneNumber" name={['user', 'phonNumber']} label="PhoneNumber" />
+        <CustomInput type="phoneNumber" name={['user', 'phonNumber']} label="PhoneNumber" />
         <CustomButton content="Sign Up" type="primary" htmlType="submit" />
       </Form>
     </Flex>

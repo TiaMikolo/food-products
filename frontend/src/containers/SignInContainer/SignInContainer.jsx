@@ -2,25 +2,26 @@ import { Flex, Form } from 'antd'
 import layout from '../../const/layout/layout'
 import { flexSTyleSignIn, signInContainerStyle } from './signInContainer.css'
 import CustomButton from '../../components/CustomButtons/CustomButton'
-import OutlinedInput from '../../components/InputComponents/OutlinedInput'
+import OutlinedInput from '../../components/CustomInput/CustomInput'
+import CustomInput from '../../components/CustomInput/CustomInput'
 
 const SignContainer = () => {
   return (
     <Flex justify="center" align="center" style={flexSTyleSignIn}>
       <Form {...layout} name="nest-messages" style={signInContainerStyle}>
-        <OutlinedInput
+        <CustomInput
           type="text"
           name={['user', 'name ']}
           label="Name"
           rule={[{ required: true }]}
         />
-        <OutlinedInput
+        <CustomInput
           type="text"
           name={['user', 'email ']}
           label="Email"
           rule={[{ type: 'email', required: true }]}
         />
-        <OutlinedInput
+        <CustomInput
           type="password"
           name={['user', 'password']}
           label="Password"
