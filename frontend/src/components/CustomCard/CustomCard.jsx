@@ -1,23 +1,24 @@
 import { Card } from 'antd'
-import styleCard from './CustomCard.css'
 const { Meta } = Card
+import { useStyles } from './CustomCard.css';
 
-const CustomCard = ({ alt, img, productName, price }) => (
-  <Card
-    hoverable
-    style={styleCard}
-    cover={
-      <img
-        draggable={false}
-        alt={alt}
-        src={img}
-        width={'232px'}
-        height={'232px'}
-        style={{ objectFit: 'contain' }}
-      />
-    }
-  >
+const CustomCard = ({ alt, img, productName, price }) => {
+  const classes = useStyles();
+  return (
+    <Card
+      hoverable
+      className={classes.root}
+      cover={
+        <img
+          draggable={false}
+          alt={alt}
+          src={img}
+          className={classes.image}
+        />
+      }
+    >
     <Meta title={productName} description={`${price} €`} />
-  </Card>
-)
+    </Card>
+  )
+}
 export default CustomCard
