@@ -3,52 +3,19 @@ import layout from '../../const/layout/layout'
 import { flexSTyleSignUp, signUpContainerStyle } from './signUpContainer.css'
 import CustomButton from '../../components/CustomButton/CustomButton'
 import CustomInput from '../../components/CustomInput/CustomInput'
-import { useState } from 'react'
 import { initialUser } from '../../const/user/user'
 
 const SignUpContainer = () => {
-  const [user, setUser] = useState(initialUser)
-  const onSubmitSignup = () => {
-    console.log(user)
+  const onSubmitSignup = values => {
+    console.log(values)
   }
-  const handleChangeName = e => {
-    setUser({
-      ...user,
-      name: e.target.value,
-    })
-  }
-  const handleChangeFirstName = e => {
-    setUser({
-      ...user,
-      firstName: e.target.value,
-    })
-  }
-  const handleChangeEmail = e => {
-    setUser({
-      ...user,
-      email: e.target.value,
-    })
-  }
-  const handleChangePassword = e => {
-    setUser({
-      ...user,
-      password: e.target.value,
-    })
-  }
-  const handleChangePhoneNumber = e => {
-    setUser({
-      ...user,
-      phoneNumber: e.target.value,
-    })
-  }
-
   return (
     <Flex justify="center" align="center" style={flexSTyleSignUp}>
       <Form
         {...layout}
         name="nest-messages"
         style={signUpContainerStyle}
-        initialValues={{ prefix: '+261' }}
+        initialValues={{ prefix: '+261', ...initialUser }}
         onFinish={onSubmitSignup}
       >
         <CustomInput
@@ -56,32 +23,28 @@ const SignUpContainer = () => {
           label="Nom"
           rule={[{ required: true, message: 'Votre nom est requis!' }]}
           type="text"
-          value={user.name}
-          onChange={handleChangeName}
+          // value={user.name}
         />
         <CustomInput
           name="firstName"
           label="Prenom"
           rule={[{ required: true, message: 'Votre prénom est requis!' }]}
           type="text"
-          value={user.firstName}
-          onChange={handleChangeFirstName}
+          // value={user.firstName}
         />
         <CustomInput
           name="email"
           label="Email"
           rule={[{ type: 'email', required: true, message: 'Votre e-mail est requis!' }]}
           type="text"
-          value={user.email}
-          onChange={handleChangeEmail}
+          // value={user.email}
         />
         <CustomInput
           type="phoneNumber"
           name="phoneNumber"
           label="Téléphone"
           rule={[{ required: true, message: 'Entrer votre numéro de téléphone!' }]}
-          value={user.phoneNumber}
-          onChange={handleChangePhoneNumber}
+          // value={user.phoneNumber}
         />
         <CustomInput
           type="password"
@@ -89,8 +52,7 @@ const SignUpContainer = () => {
           label="Mot de passe"
           rule={[{ required: true, message: 'Entrer votre mot de passe!' }]}
           hasFeedback="hasFeedback"
-          value={user.password}
-          onChange={handleChangePassword}
+          // value={user.password}
         />
         <CustomInput
           type="password"
@@ -114,12 +76,7 @@ const SignUpContainer = () => {
           ]}
           hasFeedback="hasFeedback"
         />
-        <CustomButton
-          content="S'inscrire"
-          type="primary"
-          htmlType="submit"
-          // onClick={onSubmitSignup }
-        />
+        <CustomButton content="S'inscrire" type="primary" htmlType="submit" />
       </Form>
     </Flex>
   )
