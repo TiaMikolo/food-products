@@ -8,8 +8,8 @@ const App = () => {
   return (
     // <SculpturePage />
     // <SignInPage />
-    // <SignUpPage />
-    <ProductListPage />
+    <SignUpPage />
+    // <ProductListPage />
     // <MessagePage />
   )
 }

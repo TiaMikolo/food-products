@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import sculptureList from '../../const/sculptureList'
-import CustomButton from '../../components/CustomButtons/CustomButton'
+import CustomButton from '../../components/CustomButton/CustomButton'
 
 const SculptureContainer = () => {
   const [index, setIndex] = useState(0)

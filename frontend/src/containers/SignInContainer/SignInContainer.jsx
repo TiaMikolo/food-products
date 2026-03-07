@@ -1,8 +1,7 @@
 import { Flex, Form } from 'antd'
 import layout from '../../const/layout/layout'
 import { flexSTyleSignIn, signInContainerStyle } from './signInContainer.css'
-import CustomButton from '../../components/CustomButtons/CustomButton'
-import OutlinedInput from '../../components/CustomInput/CustomInput'
+import CustomButton from '../../components/CustomButton/CustomButton'
 import CustomInput from '../../components/CustomInput/CustomInput'
 
 const SignContainer = () => {

@@ -1,4 +1,3 @@
-const customInputStyle = { width: '300px' }
-const customInputPhoneNumberStyle = { width: '267px' }
+const customInputStyle = { width: '340px' }
 
-export { customInputStyle, customInputPhoneNumberStyle }
+export { customInputStyle }
