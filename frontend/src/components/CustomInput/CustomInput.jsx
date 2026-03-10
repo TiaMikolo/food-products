@@ -1,23 +1,57 @@
 import { Form } from 'antd'
 import { Input, Space } from 'antd'
 import prefixSelector from '../../const/prefixSelector/prefixSelector'
-import { customInputStyle } from './CustomInput.css'
+import { useStyles } from './CustomInput.css'
 
-const renderInput = (type, value, onChange) => {
+const { TextArea } = Input
+
+const RenderInput = (type, value, onChange, placeholder) => {
+  const classes = useStyles()
   switch (type) {
     case 'text':
-      return <Input style={customInputStyle} value={value} onChange={onChange} />
+      return (
+        <Input
+          className={classes.input}
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+        />
+      )
     case 'password':
-      return <Input.Password style={customInputStyle} value={value} onChange={onChange} />
+      return (
+        <Input.Password
+          className={classes.input}
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+        />
+      )
     case 'phoneNumber':
       return (
-        <Space.Compact block style={customInputStyle}>
+        <Space.Compact block className={classes.input}>
           {prefixSelector}
-          <Input value={value} onChange={onChange} />
+          <Input value={value} onChange={onChange} placeholder={placeholder} />
         </Space.Compact>
       )
+    case 'textArea':
+      return (
+        <TextArea
+          value={value}
+          onChange={onChange}
+          rows={2}
+          className={classes.input}
+          placeholder={placeholder}
+        />
+      )
     default:
-      return <Input style={customInputStyle} value={value} onChange={onChange} />
+      return (
+        <Input
+          className={classes.input}
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+        />
+      )
   }
 }
 
@@ -30,6 +64,7 @@ const CustomInput = ({
   hasFeedback,
   value,
   onChange,
+  placeholder,
 }) => {
   return (
     <Form.Item
@@ -39,7 +74,7 @@ const CustomInput = ({
       dependencies={dependencies}
       hasFeedback={hasFeedback}
     >
-      {renderInput(type, value, onChange)}
+      {RenderInput(type, value, onChange, placeholder)}
     </Form.Item>
   )
 }
