@@ -21,7 +21,7 @@ export const useStyles = createUseStyles(() => ({
   nameAndIndicator: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '5px',
+    gap: '2px',
     flex: '1',
   },
   iconsContainer: {

@@ -16,6 +16,7 @@ export const useStyles = createUseStyles(() => ({
     fontWeight: 600,
     color: ' #B0BAC9',
     cursor: 'pointer',
+    fontFamily: 'DM Sans, sans-serif',
   },
   cliqued: {
     flex: '1',
@@ -26,5 +27,6 @@ export const useStyles = createUseStyles(() => ({
     color: ' #1677FF',
     borderBottom: '2px solid #1677FF',
     cursor: 'pointer',
+    fontFamily: 'DM Sans, sans-serif',
   },
 }))

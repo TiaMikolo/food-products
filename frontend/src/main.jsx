@@ -6,12 +6,24 @@ import ProductListPage from './pages/ProductListPage/ProductListPage.jsx'
 import SignUpPage from './pages/SignUpPage/SignUpPage.jsx'
 import SignInPage from './pages/SignInPage/SignInPage.jsx'
 import ChatPage from './pages/ChatPage/ChatPage.jsx'
-import Tabs from './components/Tabs/Tabs.jsx'
+// import Tabs from './components/Tabs/Tabs.jsx'
+import Bubble from './components/Bubble/Bubble.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Tabs firstTitle="Messages" secondTitle="Amis" />} />
+      {/* <Route path="/" element={<Tabs firstTitle="Messages" secondTitle="Amis" />} /> */}
+      <Route
+        path="/"
+        element={
+          <Bubble
+            message="Salut ! Tu as vu le dernier design ?"
+            type="bubbleThem"
+            name="Mikolo"
+            time="10:45"
+          />
+        }
+      />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/products" element={<ProductListPage />} />
       <Route path="/signin" element={<SignInPage />} />
