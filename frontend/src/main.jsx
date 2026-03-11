@@ -6,12 +6,15 @@ import ProductListPage from './pages/ProductListPage/ProductListPage.jsx'
 import SignUpPage from './pages/SignUpPage/SignUpPage.jsx'
 import SignInPage from './pages/SignInPage/SignInPage.jsx'
 import ChatPage from './pages/ChatPage/ChatPage.jsx'
-import CustomTypography from './components/CustomTypography/CustomTypography.jsx'
+import AvatarSegmented from './components/AvatarSegmented/AvatarSegmented.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<CustomTypography text="Ayoton" />} />
+      <Route
+        path="/"
+        element={<AvatarSegmented user="Ayoton" name="Ayoton" indicator="● En ligne" />}
+      />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/products" element={<ProductListPage />} />
       <Route path="/signin" element={<SignInPage />} />
