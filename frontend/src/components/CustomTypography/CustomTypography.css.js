@@ -22,4 +22,18 @@ export const useStyles = createUseStyles(() => ({
     color: '#B0BAC9',
     fontSize: '10px',
   },
+  icon: {
+    background: '#F0F4FF',
+    color: ' #1677FF',
+    width: '26px',
+    height: '26px',
+    borderRadius: '7px',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    fontSize: '13px',
+    '&:hover': {
+      cursor: 'pointer',
+    },
+  },
 }))

@@ -6,22 +6,14 @@ import ProductListPage from './pages/ProductListPage/ProductListPage.jsx'
 import SignUpPage from './pages/SignUpPage/SignUpPage.jsx'
 import SignInPage from './pages/SignInPage/SignInPage.jsx'
 import ChatPage from './pages/ChatPage/ChatPage.jsx'
-import AvatarRecentMessage from './components/AvatarRecentMessage/AvatarRecentMessage.jsx'
+import OnlineFriends from './components/OnlineFriends/OnlineFriends.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route
         path="/"
-        element={
-          <AvatarRecentMessage
-            user="Mikolo A."
-            name="Mikolo A."
-            text="Ok merci pour le ret..."
-            time="10:42"
-            number="2"
-          />
-        }
+        element={<OnlineFriends name="Rojo M." indicator="● En ligne" firstIcon="✉" lastIcon="✕" />}
       />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/products" element={<ProductListPage />} />

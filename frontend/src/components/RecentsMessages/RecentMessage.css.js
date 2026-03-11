@@ -5,12 +5,15 @@ export const useStyles = createUseStyles(() => ({
     display: 'flex',
     flexDirection: 'row',
     gap: '10px',
-    backgroundColor: '#F0F4FF',
     alignItems: 'center',
     padding: '8px',
     borderRadius: '10px',
     marginBottom: '2px',
     width: '261px', //delete after
+    '&:hover': {
+      backgroundColor: '#F0F4FF',
+      cursor: 'pointer',
+    },
   },
   typographyAndNotificationContainer: {
     display: 'flex',

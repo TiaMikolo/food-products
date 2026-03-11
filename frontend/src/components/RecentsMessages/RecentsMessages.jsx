@@ -1,14 +1,14 @@
+import Badge from '../Badge/Badge'
 import CustomAvatar from '../CustomAvatar/CustomAvatar'
 import CustomTypography from '../CustomTypography/CustomTypography'
-import Notification from '../Notification/Notification'
-import { useStyles } from './AvatarRecentMessage.css'
+import { useStyles } from './RecentsMessages.css'
 
-const AvatarRecentMessage = ({ user, name, text, time, number }) => {
+const RecentsMessages = ({ name, text, time, number }) => {
   const classes = useStyles()
   return (
     <div className={classes.container}>
       <div>
-        <CustomAvatar user={user} classNameRoot={classes.avatar} />
+        <CustomAvatar user={name} classNameRoot={classes.avatar} />
       </div>
       <div className={classes.typographyAndNotificationContainer}>
         <div className={classes.typographyAndNotification}>
@@ -17,11 +17,11 @@ const AvatarRecentMessage = ({ user, name, text, time, number }) => {
         </div>
         <div className={classes.typographyAndNotification}>
           <CustomTypography type="text" text={text} />
-          <Notification number={number} />
+          <Badge number={number} />
         </div>
       </div>
     </div>
   )
 }
 
-export default AvatarRecentMessage
+export default RecentsMessages
