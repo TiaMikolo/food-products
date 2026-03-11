@@ -6,15 +6,12 @@ import ProductListPage from './pages/ProductListPage/ProductListPage.jsx'
 import SignUpPage from './pages/SignUpPage/SignUpPage.jsx'
 import SignInPage from './pages/SignInPage/SignInPage.jsx'
 import ChatPage from './pages/ChatPage/ChatPage.jsx'
-import OnlineFriends from './components/OnlineFriends/OnlineFriends.jsx'
+import CustomTypography from './components/CustomTypography/CustomTypography.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-      <Route
-        path="/"
-        element={<OnlineFriends name="Rojo M." indicator="● En ligne" firstIcon="✉" lastIcon="✕" />}
-      />
+      <Route path="/" element={<CustomTypography type="title" text="Amis en ligne" />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/products" element={<ProductListPage />} />
       <Route path="/signin" element={<SignInPage />} />

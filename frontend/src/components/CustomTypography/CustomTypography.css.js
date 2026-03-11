@@ -36,4 +36,13 @@ export const useStyles = createUseStyles(() => ({
       cursor: 'pointer',
     },
   },
+  title: {
+    fontSize: '9px',
+    fontWeight: 700,
+    color: ' #B0BAC9',
+    letterSpacing: '1.2px',
+    textTransform: 'uppercase',
+    padding: '6px 6px 8px',
+    fontFamily: 'DM Sans, sans-serif',
+  },
 }))
