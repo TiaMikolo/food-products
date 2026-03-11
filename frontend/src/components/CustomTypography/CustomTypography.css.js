@@ -1,14 +1,10 @@
 import { createUseStyles } from 'react-jss'
 
 export const useStyles = createUseStyles(() => ({
-  textContainer: {
-    border: 'solid 2px',
-    borderBlockColor: 'black',
-    display: 'inline-block',
-    maxWidth: '250px',
-    whiteSpace: 'normal',
-    overflowWrap: 'break-words',
-    padding: '5px',
-    margin: '5px',
+  name: {
+    color: ' #1A1A2E',
+    fontWeight: 700,
+    fontSize: '14px',
+    fontFamily: 'DM Sans, sans-serif',
   },
 }))

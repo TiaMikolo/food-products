@@ -1,8 +1,13 @@
-import React from 'react'
-import { Avatar } from 'antd'
+import { useStyles } from './CustomAvatar.css'
 
 const CustomAvatar = ({ user }) => {
-  return <Avatar>{user}</Avatar>
+  const classes = useStyles()
+  return (
+    <div className={classes.container}>
+      {user}
+      <div className={classes.greenDot}></div>
+    </div>
+  )
 }
 
 export default CustomAvatar

@@ -18,6 +18,6 @@ export const useStyles = createUseStyles(() => ({
     display: 'flex',
     alignItems: 'center',
     flexDirection: 'column',
-    border: 'solid 2px blue',
+    // border: 'solid 2px blue',
   },
 }))
