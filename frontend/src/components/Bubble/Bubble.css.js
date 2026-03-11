@@ -41,5 +41,8 @@ export const useStyles = createUseStyles(() => ({
     fontSize: '9px',
     color: '#B0BAC9',
     padding: '0 3px',
+    width: '28.27px',
+    height: '12px',
+    fontFamily: 'DM Sans, sans-serif',
   },
 }))

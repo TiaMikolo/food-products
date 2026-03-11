@@ -23,5 +23,9 @@ export const useStyles = createUseStyles(() => ({
     fontSize: '12px',
     fontFamily: 'DM Sans,sans-serif',
     paddingLeft: '39px',
+    outline: 'none',
+    '&::placeholder': {
+      color: '#C0C8D4',
+    },
   },
 }))

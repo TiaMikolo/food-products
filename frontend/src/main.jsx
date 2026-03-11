@@ -6,14 +6,16 @@ import ProductListPage from './pages/ProductListPage/ProductListPage.jsx'
 import SignUpPage from './pages/SignUpPage/SignUpPage.jsx'
 import SignInPage from './pages/SignInPage/SignInPage.jsx'
 import ChatPage from './pages/ChatPage/ChatPage.jsx'
+// import MessageBar from './components/MessageBar/MessageBar.jsx'
 // import Tabs from './components/Tabs/Tabs.jsx'
-import Bubble from './components/Bubble/Bubble.jsx'
+// import Bubble from './components/Bubble/Bubble.jsx'
+import SearchInput from './components/SearchInput/SearchInput.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       {/* <Route path="/" element={<Tabs firstTitle="Messages" secondTitle="Amis" />} /> */}
-      <Route
+      {/* <Route
         path="/"
         element={
           <Bubble
@@ -23,7 +25,19 @@ createRoot(document.getElementById('root')).render(
             time="10:45"
           />
         }
-      />
+      /> */}
+      {/* <Route
+        path="/"
+        element={
+          <MessageBar
+            firstIcon="😊"
+            secondIcon="📎"
+            placeholder="Ecrire un message..."
+            thirdIcon="➤"
+          />
+        }
+      /> */}
+      <Route path="/" element={<SearchInput placeholder="Rechercher..." />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/products" element={<ProductListPage />} />
       <Route path="/signin" element={<SignInPage />} />

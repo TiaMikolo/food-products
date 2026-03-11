@@ -1,9 +1,9 @@
 import Badge from '../Badge/Badge'
 import CustomAvatar from '../CustomAvatar/CustomAvatar'
 import CustomTypography from '../CustomTypography/CustomTypography'
-import { useStyles } from './RecentsMessages.css'
+import { useStyles } from './RecentMessage.css'
 
-const RecentsMessages = ({ name, text, time, number }) => {
+const RecentMessage = ({ name, text, time, number }) => {
   const classes = useStyles()
   return (
     <div className={classes.container}>
@@ -24,4 +24,4 @@ const RecentsMessages = ({ name, text, time, number }) => {
   )
 }
 
-export default RecentsMessages
+export default RecentMessage

@@ -1,8 +1,8 @@
 import CustomAvatar from '../CustomAvatar/CustomAvatar'
 import CustomTypography from '../CustomTypography/CustomTypography'
-import { useStyles } from './OnlineFriends.css'
+import { useStyles } from './OnlineFriend.css'
 
-const OnlineFriends = ({ name, indicator, firstIcon, lastIcon }) => {
+const OnlineFriend = ({ name, indicator, firstIcon, lastIcon }) => {
   const classes = useStyles()
   return (
     <div className={classes.container}>
@@ -23,4 +23,4 @@ const OnlineFriends = ({ name, indicator, firstIcon, lastIcon }) => {
   )
 }
 
-export default OnlineFriends
+export default OnlineFriend

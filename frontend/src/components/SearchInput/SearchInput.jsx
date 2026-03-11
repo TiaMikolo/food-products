@@ -1,10 +1,10 @@
 import { useStyles } from './SearchInput.css'
 
-const SearchInput = () => {
+const SearchInput = ({ placeholder }) => {
   const classes = useStyles()
   return (
     <div className={classes.container}>
-      <input type="text" placeholder="Rechercher..." className={classes.root} />
+      <input type="text" placeholder={placeholder} className={classes.root} />
     </div>
   )
 }
