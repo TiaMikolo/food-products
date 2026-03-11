@@ -12,6 +12,7 @@ export const useStyles = createUseStyles(() => ({
     position: 'relative',
     color: '#1677FF',
     fontWeight: 700,
+    fontSize: '13px',
     fontFamily: 'DM Sans,sans-serif',
   },
   greenDot: {

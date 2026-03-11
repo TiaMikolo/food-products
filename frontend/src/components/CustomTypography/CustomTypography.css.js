@@ -14,6 +14,12 @@ export const useStyles = createUseStyles(() => ({
   },
   text: {
     fontFamily: 'DM Sans, sans-serif',
+    fontSize: '11px',
+    color: '#8A94A6',
+  },
+  litleLabel: {
+    fontFamily: 'DM Sans, sans-serif',
+    color: '#B0BAC9',
     fontSize: '10px',
   },
 }))

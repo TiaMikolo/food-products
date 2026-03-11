@@ -9,6 +9,8 @@ const CustomTypography = ({ text, type }) => {
       return <div className={classes.indicator}>{text}</div>
     case 'text':
       return <div className={classes.text}>{text}</div>
+    case 'littleLabel':
+      return <div className={classes.litleLabel}>{text}</div>
     default:
       return <div className={classes.name}>{text}</div>
   }
