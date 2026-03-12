@@ -33,6 +33,9 @@ export const useStyles = createUseStyles(() => ({
     alignSelf: 'flex-start',
     fontSize: '9px',
   },
+  badgeContainerNone: {
+    display: 'none',
+  },
   badge: {
     padding: '1px 5px',
   },

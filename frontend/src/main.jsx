@@ -25,6 +25,7 @@ createRoot(document.getElementById('root')).render(
             member="5 membres"
             message="Mikolo: Super idée 🔥"
             number="2"
+            badge={true}
           />
         }
       />

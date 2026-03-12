@@ -3,7 +3,7 @@ import CustomTypography from '../CustomTypography/CustomTypography'
 import RoomIcon from '../RoomIcon/RoomIcon'
 import { useStyles } from './RoomCard.css'
 
-const RoomCard = ({ icon, roomName, member, message, number }) => {
+const RoomCard = ({ icon, roomName, member, message, number, badge = false }) => {
   const classes = useStyles()
   return (
     <div className={classes.container}>
@@ -13,7 +13,7 @@ const RoomCard = ({ icon, roomName, member, message, number }) => {
         <CustomTypography type="indicator" text={member} classNameIndicator={classes.member} />
         <CustomTypography type="indicator" text={message} classNameIndicator={classes.message} />
       </div>
-      <div className={classes.badgeContainer}>
+      <div className={badge === false ? classes.badgeContainerNone : classes.badgeContainer}>
         <Badge number={number} classBadge={classes.badge} />
       </div>
     </div>
