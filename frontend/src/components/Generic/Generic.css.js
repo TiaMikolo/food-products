@@ -14,7 +14,7 @@ export const useStyles = createUseStyles(() => ({
     },
   },
   containerDanger: {
-    color: ' #FF4D4F',
+    color: ' #FF4D4F !important',
   },
   containerNoDanger: {
     color: ' #1A1A2E',
