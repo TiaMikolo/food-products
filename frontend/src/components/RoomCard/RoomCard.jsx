@@ -13,7 +13,7 @@ const RoomCard = ({ icon, roomName, member, message, number, badge = false }) =>
         <CustomTypography type="indicator" text={member} classNameIndicator={classes.member} />
         <CustomTypography type="indicator" text={message} classNameIndicator={classes.message} />
       </div>
-      <div className={badge === false ? classes.badgeContainerNone : classes.badgeContainer}>
+      <div className={badge ? classes.badgeContainer : classes.badgeContainerNone}>
         <Badge number={number} classBadge={classes.badge} />
       </div>
     </div>

@@ -6,7 +6,8 @@ import ProductListPage from './pages/ProductListPage/ProductListPage.jsx'
 import SignUpPage from './pages/SignUpPage/SignUpPage.jsx'
 import SignInPage from './pages/SignInPage/SignInPage.jsx'
 import ChatPage from './pages/ChatPage/ChatPage.jsx'
-import AddButton from './components/AddButton/AddButton.jsx'
+import IconButton from './components/IconButton/IconButton.jsx'
+// import AddButton from './components/AddButton/AddButton.jsx'
 // import RoomCard from './components/RoomCard/RoomCard.jsx'
 // import UserRole from './components/UserRole/UserRole.jsx'
 // import MessageBar from './components/MessageBar/MessageBar.jsx'
@@ -17,17 +18,18 @@ import AddButton from './components/AddButton/AddButton.jsx'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<AddButton content="＋ Ajouter" />} />
+      <Route path="/" element={<IconButton icon="📞" />} />
+      {/* <Route path="/" element={<AddButton content="＋ Ajouter" />} /> */}
       {/* <Route
         path="/"
         element={
           <RoomCard
             icon="💬"
-            roomName="Design Team"    
+            roomName="Design Team"
             member="5 membres"
             message="Mikolo: Super idée 🔥"
             number="2"
-            badge={true}
+            // badge={true}
           />
         }
       /> */}
