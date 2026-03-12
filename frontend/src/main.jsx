@@ -39,7 +39,7 @@ createRoot(document.getElementById('root')).render(
         }
       /> */}
       {/* <Route path="/" element={<SearchInput placeholder="Rechercher..." />} /> */}
-      <Route path="/" element={<UserRole role="Sender" name="Ayoton" icon="▷" />} />
+      <Route path="/" element={<UserRole role="Sender" placeholder="Ayoton" button="▷" />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/products" element={<ProductListPage />} />
       <Route path="/signin" element={<SignInPage />} />

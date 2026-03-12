@@ -13,25 +13,33 @@ export const useStyles = createUseStyles(() => ({
     minWidth: '50px',
     height: '13px',
   },
-  nameIconContainer: {
+  inputButtonContainer: {
     flex: 1,
     background: ' #F5F7FA',
     border: '1px solid #E8ECF0',
     borderRadius: '8px',
-    padding: '6px 10px',
+    padding: '6px 9px',
     fontSize: '12px',
+    color: '#1A1A2E',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
-    height: '16px',
   },
-  name: {
-    color: '#1A1A2E',
+  input: {
+    border: 'none',
+    background: ' #F5F7FA',
+    outline: 'none',
     fontSize: '12px',
+    '&::placeholder': {
+      color: '#1A1A2E',
+      fontSize: '12px',
+    },
   },
-  icon: {
-    color: ' #B0BAC9',
-    width: '9.60px',
-    height: '18px',
+  button: {
+    color: '#B0BAC9',
+    '&:hover': {
+      cursor: 'pointer',
+      color: '#1677FF',
+    },
   },
 }))
