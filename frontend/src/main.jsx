@@ -6,6 +6,7 @@ import ProductListPage from './pages/ProductListPage/ProductListPage.jsx'
 import SignUpPage from './pages/SignUpPage/SignUpPage.jsx'
 import SignInPage from './pages/SignInPage/SignInPage.jsx'
 import ChatPage from './pages/ChatPage/ChatPage.jsx'
+import RoomCard from './components/RoomCard/RoomCard.jsx'
 import UserRole from './components/UserRole/UserRole.jsx'
 // import MessageBar from './components/MessageBar/MessageBar.jsx'
 // import Tabs from './components/Tabs/Tabs.jsx'
@@ -15,6 +16,18 @@ import UserRole from './components/UserRole/UserRole.jsx'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
+      <Route
+        path="/"
+        element={
+          <RoomCard
+            icon="💬"
+            roomName="Design Team"
+            member="5 membres"
+            message="Mikolo: Super idée 🔥"
+            number="2"
+          />
+        }
+      />
       {/* <Route path="/" element={<Tabs firstTitle="Messages" secondTitle="Amis" />} /> */}
       {/* <Route
         path="/"
@@ -39,7 +52,7 @@ createRoot(document.getElementById('root')).render(
         }
       /> */}
       {/* <Route path="/" element={<SearchInput placeholder="Rechercher..." />} /> */}
-      <Route path="/" element={<UserRole role="Sender" placeholder="Ayoton" button="▷" />} />
+      {/* <Route path="/" element={<UserRole role="Sender" placeholder="Ayoton" button="▷" />} /> */}
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/products" element={<ProductListPage />} />
       <Route path="/signin" element={<SignInPage />} />

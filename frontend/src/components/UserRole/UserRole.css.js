@@ -31,7 +31,6 @@ export const useStyles = createUseStyles(() => ({
     outline: 'none',
     fontSize: '12px',
     '&::placeholder': {
-      color: '#1A1A2E',
       fontSize: '12px',
     },
   },
