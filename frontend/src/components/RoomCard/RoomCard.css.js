@@ -7,12 +7,14 @@ export const useStyles = createUseStyles(() => ({
     gap: '10px',
     padding: '10px',
     borderRadius: '11px',
-    background: '#F5F7FA',
     border: '1px solid #E8ECF0',
     marginBottom: '8px',
     cursor: 'pointer',
     width: '217px',
     height: '48px',
+    '&:hover': {
+      background: '#F5F7FA',
+    },
   },
   icon: {
     background: ' #E6F0FF',
