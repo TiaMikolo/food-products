@@ -6,10 +6,11 @@ import ProductListPage from './pages/ProductListPage/ProductListPage.jsx'
 import SignUpPage from './pages/SignUpPage/SignUpPage.jsx'
 import SignInPage from './pages/SignInPage/SignInPage.jsx'
 import ChatPage from './pages/ChatPage/ChatPage.jsx'
+import UserRole from './components/UserRole/UserRole.jsx'
 // import MessageBar from './components/MessageBar/MessageBar.jsx'
 // import Tabs from './components/Tabs/Tabs.jsx'
 // import Bubble from './components/Bubble/Bubble.jsx'
-import SearchInput from './components/SearchInput/SearchInput.jsx'
+// import SearchInput from './components/SearchInput/SearchInput.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -37,7 +38,8 @@ createRoot(document.getElementById('root')).render(
           />
         }
       /> */}
-      <Route path="/" element={<SearchInput placeholder="Rechercher..." />} />
+      {/* <Route path="/" element={<SearchInput placeholder="Rechercher..." />} /> */}
+      <Route path="/" element={<UserRole role="Sender" name="Ayoton" icon="▷" />} />
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/products" element={<ProductListPage />} />
       <Route path="/signin" element={<SignInPage />} />

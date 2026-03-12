@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import { useStyles } from './CustomTypography.css'
 
-const CustomTypography = ({ text, type, classNameIndicator, classNameIcon }) => {
+const CustomTypography = ({ text, type, classNameIndicator, classNameIcon, classNameText }) => {
   const classes = useStyles()
   switch (type) {
     case 'name':
@@ -9,7 +9,7 @@ const CustomTypography = ({ text, type, classNameIndicator, classNameIcon }) => 
     case 'indicator':
       return <div className={classNames(classes.indicator, classNameIndicator)}>{text}</div>
     case 'text':
-      return <div className={classes.text}>{text}</div>
+      return <div className={classNames(classes.text, classNameText)}>{text}</div>
     case 'littleLabel':
       return <div className={classes.litleLabel}>{text}</div>
     case 'icon':
