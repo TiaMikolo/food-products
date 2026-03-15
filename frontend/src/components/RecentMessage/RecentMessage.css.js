@@ -9,7 +9,6 @@ export const useStyles = createUseStyles(() => ({
     padding: '8px',
     borderRadius: '10px',
     marginBottom: '2px',
-    width: '261px', //delete after
     '&:hover': {
       backgroundColor: '#F0F4FF',
       cursor: 'pointer',
@@ -28,5 +27,38 @@ export const useStyles = createUseStyles(() => ({
   avatar: {
     width: '44px',
     height: '44px',
+  },
+  numberNone: {
+    display: 'none',
+  },
+  greenDot: {
+    backgroundColor: 'chartreuse',
+    width: '11px',
+    height: '11px',
+    position: 'absolute',
+    bottom: '0px',
+    right: '1px',
+    borderRadius: '50%',
+  },
+  avatarOrange: {
+    background: 'linear-gradient(135deg, #FFF0E6, #FFD4BA)',
+    color: '#FA8C16',
+  },
+  avatarOrangeGray: {
+    background: 'linear-gradient(135deg, #FFF0E6, #FFD4BA)',
+    color: '#FA8C16',
+  },
+  avatarGreen: {
+    background: 'linear-gradient(135deg, #F0FFE6, #C8F0BA)',
+    color: ' #52C41A',
+  },
+  dotOrange: {
+    backgroundColor: '#FA8C16',
+  },
+  dotGray: {
+    backgroundColor: '#C0C8D4',
+  },
+  badgeNone: {
+    display: 'none',
   },
 }))

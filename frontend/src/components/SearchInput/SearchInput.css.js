@@ -13,7 +13,7 @@ export const useStyles = createUseStyles(() => ({
     },
   },
   root: {
-    width: '100%',
+    width: '-webkit-fill-available',
     height: '16px',
     borderRadius: '9px',
     border: '1px solid #E8ECF0',

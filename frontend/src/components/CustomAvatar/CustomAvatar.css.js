@@ -15,13 +15,13 @@ export const useStyles = createUseStyles(() => ({
     fontSize: '13px',
     fontFamily: 'DM Sans,sans-serif',
   },
-  greenDot: {
-    backgroundColor: 'chartreuse',
-    width: '11px',
-    height: '11px',
-    position: 'absolute',
-    bottom: '0px',
-    right: '1px',
-    borderRadius: '50%',
-  },
+  // greenDot: {
+  //   backgroundColor: 'chartreuse',
+  //   width: '11px',
+  //   height: '11px',
+  //   position: 'absolute',
+  //   bottom: '0px',
+  //   right: '1px',
+  //   borderRadius: '50%',
+  // },
 }))

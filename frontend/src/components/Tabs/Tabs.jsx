@@ -1,37 +1,28 @@
 import { useState } from 'react'
 import { useStyles } from './Tabs.css'
 
-const items = [
-  {
-    id: '1',
-    label: 'Messages',
-  },
-  {
-    id: '2',
-    label: 'Amis',
-  },
-]
+const Tabs = ({ items }) => {
+  const classes = useStyles()
+  const [indexItem, setIndexItem] = useState(0)
 
-const Tabs = () => {
-  const [isCliqued, setIsCliqued] = useState('1')
-
-  const onClick = id => {
-    setIsCliqued(id)
+  const handleClick = index => {
+    setIndexItem(index)
   }
 
-  const titles = items
-  const classes = useStyles()
   return (
-    <div className={classes.container}>
-      {titles.map(title => (
-        <div
-          onClick={() => onClick(title.id)}
-          key={title.id}
-          className={title.id === isCliqued ? classes.cliqued : classes.noCliqued}
-        >
-          {title.label}
-        </div>
-      ))}
+    <div className={classes.containerTabs}>
+      <div className={classes.containerItem}>
+        {items.map((item, index) => (
+          <div key={item.id} onClick={() => handleClick(index)} className={classes.label}>
+            <div className={classes.container}>
+              <div className={indexItem === index ? classes.cliqued : classes.noCliqued}>
+                {item.label}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      {items[indexItem].children}
     </div>
   )
 }

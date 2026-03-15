@@ -5,8 +5,8 @@ export const useStyles = createUseStyles(() => ({
     display: 'flex',
     flexDirection: 'row',
     borderBottom: '1px solid #E8ECF0',
-    width: '277px',
     height: '39px',
+    width: '100%',
   },
   noCliqued: {
     flex: '1',
@@ -28,5 +28,15 @@ export const useStyles = createUseStyles(() => ({
     borderBottom: '2px solid #1677FF',
     cursor: 'pointer',
     fontFamily: 'DM Sans, sans-serif',
+  },
+  label: {
+    width: '100%',
+  },
+  containerItem: {
+    display: 'flex',
+  },
+  containerTabs: {
+    display: 'flex',
+    flexDirection: 'column',
   },
 }))

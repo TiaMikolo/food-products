@@ -6,7 +6,7 @@ import ProductListPage from './pages/ProductListPage/ProductListPage.jsx'
 import SignUpPage from './pages/SignUpPage/SignUpPage.jsx'
 import SignInPage from './pages/SignInPage/SignInPage.jsx'
 import ChatPage from './pages/ChatPage/ChatPage.jsx'
-import AddMemberAvatar from './components/AddMemberAvatar/AddMemberAvatar.jsx'
+// import AddMemberAvatar from './components/AddMemberAvatar/AddMemberAvatar.jsx'
 import MessagePage from './pages/MessagePage/MessagePage.jsx'
 import EditButton from './components/EditButton/EditButton.jsx'
 // import Generic from './components/Generic/Generic.jsx'
@@ -15,9 +15,7 @@ import EditButton from './components/EditButton/EditButton.jsx'
 // import RoomCard from './components/RoomCard/RoomCard.jsx'
 // import UserRole from './components/UserRole/UserRole.jsx'
 // import MessageBar from './components/MessageBar/MessageBar.jsx'
-// import Tabs from './components/Tabs/Tabs.jsx'
 // import Bubble from './components/Bubble/Bubble.jsx'
-// import SearchInput from './components/SearchInput/SearchInput.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -40,7 +38,6 @@ createRoot(document.getElementById('root')).render(
           />
         }
       /> */}
-      {/* <Route path="/" element={<Tabs firstTitle="Messages" secondTitle="Amis" />} /> */}
       {/* <Route
         path="/"
         element={
@@ -63,7 +60,6 @@ createRoot(document.getElementById('root')).render(
           />
         }
       /> */}
-      {/* <Route path="/" element={<SearchInput placeholder="Rechercher..." />} /> */}
       {/* <Route path="/" element={<UserRole role="Sender" placeholder="Ayoton" button="▷" />} /> */}
       <Route path="/signup" element={<SignUpPage />} />
       <Route path="/products" element={<ProductListPage />} />

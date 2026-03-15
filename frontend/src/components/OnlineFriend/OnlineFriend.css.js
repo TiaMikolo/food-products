@@ -33,4 +33,31 @@ export const useStyles = createUseStyles(() => ({
     background: '#FFF1F0',
     color: ' #FF4D4F',
   },
+  greenDot: {
+    backgroundColor: 'chartreuse',
+    width: '11px',
+    height: '11px',
+    position: 'absolute',
+    bottom: '0px',
+    right: '1px',
+    borderRadius: '50%',
+  },
+  avatarOrange: {
+    background: 'linear-gradient(135deg, #FFF0E6, #FFD4BA)',
+    color: '#FA8C16',
+  },
+  avatarOrangeGray: {
+    background: 'linear-gradient(135deg, #FFF0E6, #FFD4BA)',
+    color: '#FA8C16',
+  },
+  avatarGreen: {
+    background: 'linear-gradient(135deg, #F0FFE6, #C8F0BA)',
+    color: ' #52C41A',
+  },
+  dotOrange: {
+    backgroundColor: '#FA8C16',
+  },
+  dotGray: {
+    backgroundColor: '#C0C8D4',
+  },
 }))

@@ -1,7 +1,7 @@
 import { createUseStyles } from 'react-jss'
 
 export const useStyles = createUseStyles(() => ({
-  root: {
+  container: {
     width: '278px',
     background: 'white',
     borderRight: '1px solid #E8ECF0',
@@ -10,8 +10,22 @@ export const useStyles = createUseStyles(() => ({
   },
   avatarEditButtonContainer: {
     display: 'flex',
+    width: '100%',
+    justifyContent: 'space-between',
   },
-  avatar: {
-    flex: 1,
+  topContainer: {
+    padding: '16px 14px 12px',
+    borderBottom: '1px solid #E8ECF0',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '11px',
+  },
+  RecentMessageContainer: {
+    padding: '8px',
+  },
+  line: {
+    height: '1px',
+    background: '#E8ECF0',
+    margin: '10px 4px',
   },
 }))
