@@ -1,0 +1,47 @@
+import classNames from 'classnames'
+import CustomAvatar from '../CustomAvatar/CustomAvatar'
+import CustomTypography from '../CustomTypography/CustomTypography'
+import { useStyles } from './OnlineFriend.css'
+
+const OnlineFriend = ({
+  name,
+  indicator,
+  firstIcon,
+  lastIcon,
+  onClick,
+  orange = false,
+  orangeGray = false,
+  green = false,
+}) => {
+  const classes = useStyles()
+  return (
+    <div className={classes.container} onClick={onClick}>
+      <CustomAvatar
+        user={name}
+        classNameRoot={classNames(classes.avatar, {
+          [classes.avatarOrange]: orange,
+          [classes.avatarOrangeGray]: orangeGray,
+          [classes.avatarGreen]: green,
+        })}
+        classNameDot={classNames(classes.greenDot, {
+          [classes.dotOrange]: orange,
+          [classes.dotGray]: orangeGray,
+        })}
+      />
+      <div className={classes.nameAndIndicator}>
+        <CustomTypography type="name" text={name} />
+        <CustomTypography
+          type="indicator"
+          text={indicator}
+          classNameIndicator={classes.indicator}
+        />
+      </div>
+      <div className={classes.iconsContainer}>
+        <CustomTypography type="icon" text={firstIcon} />
+        <CustomTypography type="icon" text={lastIcon} classNameIcon={classes.lastIcon} />
+      </div>
+    </div>
+  )
+}
+
+export default OnlineFriend

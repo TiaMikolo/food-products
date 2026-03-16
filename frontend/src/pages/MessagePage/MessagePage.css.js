@@ -1,10 +1,9 @@
 import { createUseStyles } from 'react-jss'
 
 export const useStyles = createUseStyles(() => ({
-  input: {
-    width: '340px',
-    '@media (max-width : 450px)': {
-      width: '200px',
-    },
+  root: {
+    display: 'flex',
+    height: '100vh',
+    overflow: 'hidden',
   },
 }))

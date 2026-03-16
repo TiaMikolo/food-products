@@ -1,14 +1,14 @@
 import CustomCard from '../../components/CustomCard/CustomCard'
-import ProductList from '../../const/ProductList/ProductList'
 import { Row, Col } from 'antd'
-import { useStyles } from './ProductListContainer.css';
+import { useStyles } from './ProductListContainer.css'
 
-const ProductCardContainer = () => {
-  const classes = useStyles();
+const ProductCardContainer = ({ productsList }) => {
+  const classes = useStyles()
+
   return (
     <Row className={classes.rowCustom} gutter={[32, 16]} justify="center" align="bottom">
-      {ProductList.map(product => (
-        <Col key={product.id} className={classes.colCustom}>
+      {productsList?.map(product => (
+        <Col key={product._id} className={classes.colCustom}>
           <CustomCard
             label={product.name}
             img={product.image}

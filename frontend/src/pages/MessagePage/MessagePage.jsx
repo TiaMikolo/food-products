@@ -1,7 +1,17 @@
-import MessageConainer from '../../containers/MessageContainer/MessageContainer'
+import ChatMessageContainer from '../../containers/MessageContainer/ChatMessageContainer/ChatMessageContainer'
+import LeftMessageContainer from '../../containers/MessageContainer/LeftMessageContainer/LeftMessageContainer'
+import RightMessageContainer from '../../containers/MessageContainer/RightMessageContainer/RightMessageContainer'
+import { useStyles } from './MessagePage.css'
 
 const MessagePage = () => {
-  return <MessageConainer />
+  const classes = useStyles()
+  return (
+    <div className={classes.root}>
+      <LeftMessageContainer />
+      <ChatMessageContainer />
+      <RightMessageContainer />
+    </div>
+  )
 }
 
 export default MessagePage

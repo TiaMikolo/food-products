@@ -1,10 +1,8 @@
 import { createUseStyles } from 'react-jss'
 
 export const useStyles = createUseStyles(() => ({
-  input: {
-    width: '340px',
-    '@media (max-width : 450px)': {
-      width: '200px',
-    },
+  container: {
+    display: 'grid',
+    gridTemplateColumns: '1fr 2fr 1fr',
   },
 }))
