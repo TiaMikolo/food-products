@@ -28,4 +28,7 @@ export const useStyles = createUseStyles(() => ({
     background: '#E8ECF0',
     margin: '10px 4px',
   },
+  onlineFriend: {
+    padding: ' 0 8px',
+  },
 }))

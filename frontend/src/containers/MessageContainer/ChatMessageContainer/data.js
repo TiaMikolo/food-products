@@ -13,7 +13,7 @@ const data = [
     id: '2',
     sender: recipientId,
     recipient: senderId,
-    content: 'bonjour Mikolo',
+    content: `Oui je viens de le regarder, c'est vraiment bien fait 🔥`,
   },
   {
     id: '3',

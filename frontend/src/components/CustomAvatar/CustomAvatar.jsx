@@ -7,7 +7,7 @@ const CustomAvatar = ({ user, classNameRoot, classNameDot }) => {
   return (
     <div className={classNames(classes.container, classNameRoot)}>
       {getTwoFirstLettres(user)}
-      <div className={classNameDot}></div>
+      <div className={classNames(classes.greenDot, classNameDot)}></div>
     </div>
   )
 }

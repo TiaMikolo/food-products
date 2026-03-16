@@ -8,20 +8,20 @@ import SignInPage from './pages/SignInPage/SignInPage.jsx'
 import ChatPage from './pages/ChatPage/ChatPage.jsx'
 // import AddMemberAvatar from './components/AddMemberAvatar/AddMemberAvatar.jsx'
 import MessagePage from './pages/MessagePage/MessagePage.jsx'
-import EditButton from './components/EditButton/EditButton.jsx'
+// import EditButton from './components/EditButton/EditButton.jsx'
 // import Generic from './components/Generic/Generic.jsx'
 // import IconButton from './components/IconButton/IconButton.jsx'
 // import AddButton from './components/AddButton/AddButton.jsx'
 // import RoomCard from './components/RoomCard/RoomCard.jsx'
 // import UserRole from './components/UserRole/UserRole.jsx'
 // import MessageBar from './components/MessageBar/MessageBar.jsx'
-// import Bubble from './components/Bubble/Bubble.jsx'
+import Bubble from './components/Bubble/Bubble.jsx'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       {/* <Route path="/" element={<Generic text="Notifications" icon="🔔 " />} /> */}
-      <Route path="/" element={<EditButton content="✏️" />} />
+      {/* <Route path="/" element={<EditButton content="✏️" />} /> */}
       <Route path="/Message" element={<MessagePage />} />
       {/* <Route path="/" element={<IconButton icon="📞" />} /> */}
       {/* <Route path="/" element={<AddButton content="＋ Ajouter" />} /> */}
@@ -38,17 +38,17 @@ createRoot(document.getElementById('root')).render(
           />
         }
       /> */}
-      {/* <Route
+      <Route
         path="/"
         element={
           <Bubble
-            message="Salut ! Tu as vu le dernier design ?"
-            type="bubbleThem"
+            message="Oui je viens de le regarder, c'est vraiment bien fait 🔥"
+            type="bubbleMe"
             name="Mikolo"
             time="10:45"
           />
         }
-      /> */}
+      />
       {/* <Route
         path="/"
         element={

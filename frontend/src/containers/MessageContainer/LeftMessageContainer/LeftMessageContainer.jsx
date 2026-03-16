@@ -114,7 +114,7 @@ const LeftMessageContainer = () => {
         <SearchInput placeholder="Rechercher..." />
       </div>
       <Tabs items={tabList} />
-      <div>
+      <div className={classes.onlineFriend}>
         <CustomTypography type="title" text="Amis en ligne" />
         {onlineFriend.map(friend => (
           <OnlineFriend

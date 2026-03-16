@@ -4,7 +4,7 @@ import CustomButton from '../../components/CustomButton/CustomButton'
 import CustomInput from '../../components/CustomInput/CustomInput'
 import CustomTypography from '../../components/CustomTypography/CustomTypography'
 import { useStyles } from './ChatContainer.css'
-import { data, idMe, recipientId, senderId } from './data'
+import { data, idMe, recipientId, senderId } from '../MessageContainer/ChatMessageContainer/data'
 
 const ChatContainer = () => {
   const classes = useStyles()

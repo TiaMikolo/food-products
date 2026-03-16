@@ -15,7 +15,6 @@ const Bubble = ({ type, message, name, time }) => {
     case 'bubbleThem':
       return (
         <div className={classes.bubbleThemContainer}>
-          {' '}
           <CustomAvatar user={name} classNameRoot={classes.avatar} />
           <div className={classNames(classes.bubbleThem, classes.bubble)}>{message}</div>
           <span className={classes.time}>{time}</span>

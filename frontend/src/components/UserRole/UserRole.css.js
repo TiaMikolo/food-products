@@ -5,7 +5,7 @@ export const useStyles = createUseStyles(() => ({
     display: 'flex',
     alignItems: 'center',
     gap: '7px',
-    width: '247px',
+    width: '100%',
     height: '32px',
   },
   role: {
@@ -26,6 +26,7 @@ export const useStyles = createUseStyles(() => ({
     justifyContent: 'space-between',
   },
   input: {
+    width: '100%',
     border: 'none',
     background: ' #F5F7FA',
     outline: 'none',

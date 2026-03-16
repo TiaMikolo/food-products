@@ -2,7 +2,6 @@ import { createUseStyles } from 'react-jss'
 
 export const useStyles = createUseStyles(() => ({
   container: {
-    width: '482px',
     height: '34px',
     display: 'flex',
     alignItems: 'center',

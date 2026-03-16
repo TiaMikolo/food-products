@@ -1,7 +1,10 @@
 import ProductListContainer from '../../containers/ProductListContainer/ProductListContainer'
+import { useGetProducts } from '../../api/product'
 
 const ProductListPage = () => {
-  return <ProductListContainer />
+  const { listProduct } = useGetProducts()
+
+  return <ProductListContainer productsList={listProduct} />
 }
 
 export default ProductListPage
